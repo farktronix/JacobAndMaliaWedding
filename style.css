@@ -1,6 +1,7 @@
 html,body {
   width:100%;
   height:100%;
+  background:black;
 }
 
 /************* 
@@ -9,10 +10,11 @@ html,body {
 
 .navigation {
   background:#700000;
-  height:500px;
+  height:400px;
   width:154px;
-  right:60px;
-  margin:-2px 0px 0px 0px;
+  right:2%;
+  top:5px;
+  margin:0px 0px 0px 0px;
   position:fixed;
   z-index:999;
   -moz-box-shadow:-5px -1px 5px #000, 5px -1px 5px #000, 0px 2px 7px 2px #000;
@@ -20,33 +22,38 @@ html,body {
   box-shadow:-5px -1px 5px #000, 5px -1px 5px #000, 0px 2px 7px 2px #000;
 }
 
-.navigation li {
-  color:#fff;
-  display:block;
-  line-height:12px;
-  margin:1px 0px 0px 0px;
-  padding:15px 0;
-}
-
 .navigation ul {
   position:relative;
+  display:block;
   list-style:none;
   text-align:center;
   text-shadow:#000 0 1px 2px;
-  margin:0px 0 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display:block;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  color:#fff;
+  padding:15px 0px;
+  -webkit-transition: all .2s ease-in-out;
 }
 
 .navigation li:hover, .active{
 	cursor:pointer;
-	background-color:red;
-	width:150px!important;
+	background:#800000;
+	font-weight:bold;
 }
 
 #logo {
   position:relative;
-  width:150px;
-  left:1px;
-  top:2px;
+  width:99%;
+  left:1%;
+  top:2%;
 }
 
 /******************
@@ -56,7 +63,7 @@ html,body {
 .slide {
   background-attachment: fixed;
   width:100%;
-  height:100%;
+  height:900px;
   position: relative;
   box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
   
@@ -65,6 +72,7 @@ html,body {
   -o-background-size: cover;
   background-size: cover;
 }
+
 .wrapper {
   background-attachment: fixed;
   width:100%;
@@ -98,7 +106,7 @@ html,body {
 
 #introBox {
   position:absolute;
-  top:70%;
+  top:50%;
   left:35%;
   background:gray;
   width:200px;
@@ -106,6 +114,7 @@ html,body {
   text-align:center;
   box-shadow:5px 5px 5px #000;
   z-index:1;
+  font-size:20px;
 }
 
 /******************
@@ -114,6 +123,7 @@ html,body {
 #slideStory {
   background-attachment: fixed;
   background:url(images/cigar.jpg);
+  margin:10px 0 0;
 }
 
 /******************
