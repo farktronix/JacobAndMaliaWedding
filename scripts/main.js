@@ -21,11 +21,14 @@ jQuery(document).ready(function ($) {
          horizontalScrolling: false,
        });
      }
-   });
-    // 
-    // $(window).stellar({
-    //   horizontalScrolling: false
-    // });
+  });
+  
+  // Resize all foreground elements to fit the window
+  $(window).resize(function(){
+    $('.foreground').css("height", $(window).height() + 'px');
+  });  
+  $('.foreground').css("height", $(window).height() + 'px');
+   
   var links = $('.navItems').find('li');
       slide = $('.slide');
       mywindow = $(window);
@@ -59,8 +62,8 @@ jQuery(document).ready(function ($) {
     //easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
     function goToByScroll(dataslide) {
         htmlbody.animate({
-            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
-        }, 500, 'easeInOutQuint');
+            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top + 250
+        }, 2000, 'easeInOutQuint');
     }
     //When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
     links.click(function (e) {

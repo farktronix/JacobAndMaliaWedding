@@ -50,15 +50,33 @@ TODO:
 <section>
 <div class="slide" id="slideIntro" data-slide="1" data-stellar-background-ratio="0.6">
 	<div class="wrapper">
-		<div id="introForeground" data-stellar-ratio="1"></div>
-		<div id="introBox" data-stellar-ratio="0.5">Jacob and Malia are getting married!</div>
+		
+		<div id="introForeground" class="foreground" data-stellar-ratio="-0.1">
+			<div id="farkBox">
+				<img id="farkasBus" src="images/bus-foreground-farkas.png"/>
+			</div>
+			<div id="maliaBox">
+				<img id="maliaBus" src="images/bus-foreground-malia.png"/>
+			</div>
+		</div>
+		
+		<div id="introBox" class="textBox" data-stellar-ratio="-.5">
+			<p>Jacob and Malia are getting married!<p>
+			<p>What happened to Jacob's head?</p>
+		</div>
 	</div>
 </div>
 
 <div class="slide" id="slideStory" data-slide="2" data-stellar-background-ratio="0.6">
 	<div class="wrapper">
-		<div id="storyForeground" data-stellar-ratio="1"></div>
-		<div id="storyBox" data-stellar-ratio="0.9">
+		
+		<div id="storyForeground" class="foreground" data-stellar-ratio="1">
+			<div id="dinoBox">
+				<img id="dinoAttack" src="images/dino.png"/>
+			</div>
+		</div>
+		
+		<div id="storyBox" class="textBox" data-stellar-ratio="1.25">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla hendrerit lobortis. Cras non ultrices odio. Suspendisse commodo, purus eu eleifend lacinia, nisi odio pharetra dolor, et rutrum sapien lectus sit amet dui. Vivamus tincidunt interdum arcu eu auctor. Ut quis nibh nisl. Fusce mollis, augue in egestas lobortis, nibh est mattis tellus, a luctus turpis dolor ut arcu. Aenean ut eros nisl, non dictum augue.</p>
 
 <p>Vivamus mollis semper tempus. Pellentesque nec sollicitudin enim. Maecenas at mauris at nunc volutpat volutpat. Donec id velit non mauris rhoncus viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu massa in risus consectetur congue et lacinia odio. Suspendisse feugiat, felis at commodo egestas, nisl magna accumsan lacus, quis dignissim massa nulla ut velit. Integer ipsum turpis, adipiscing a semper et, dapibus in sapien. Vivamus sapien magna, malesuada vitae vulputate eget, commodo bibendum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet lacus ligula. Suspendisse potenti.</p>
@@ -70,10 +88,16 @@ TODO:
 
 <div class="slide" id="slideWedding" data-slide="3" data-stellar-background-ratio="0.6">
 	<div class="wrapper" data-stellar-ratio="1">
-		<div id="weddingBox" data-stellar-ratio="0.3"></div>
-		<div id="weddingForeground" data-stellar-ratio="1">
-			<img id="curiodysseySign" src="images/curiodyssey_sign_foreground.png"/>
-			
+		
+		<div id="weddingForeground" class="foreground" data-stellar-ratio="1">
+			<div id="curiodysseySignBox">
+				<!-- TODO: Create a foreground that expands to fill the entire screen, or cut off the plant on the left more cleanly -->
+				<img id="curiodysseySign" src="images/curiodyssey_sign_foreground.png"/>
+			</div>
+		</div>
+
+		<div id="weddingBox" class="textBox" data-stellar-ratio=".4">
+			Info about the Curiodyssey goes here
 		</div>
 		
 	</div>
@@ -82,8 +106,16 @@ TODO:
 
 <div class="slide" id="slideRegistry" data-slide="4" data-stellar-background-ratio="0.6">
 	<div class="wrapper">
-		<div id="registryForeground" data-stellar-ratio="1"></div>
-		<div id="registryBox" data-stellar-ratio=".75"></div>
+		
+		<div id="registryForeground" class="foreground" data-stellar-ratio="1">
+			<div id="halongBox">
+				<img id="halong" src="images/halong_foreground.png"/>
+			</div>
+		</div>
+		
+		<div id="registryBox" class="textBox" data-stellar-ratio=".75">
+			Registry Info
+		</div>
 		
 	</div>
 </div>
@@ -91,8 +123,12 @@ TODO:
 
 <div class="slide" id="slideReply" data-slide="5" data-stellar-background-ratio="0.6">
 	<div class="wrapper">
-		<div id="replyForeground" data-stellar-ratio="1"></div>
-		<div id="replyBox" data-stellar-ratio="0.6">CLICK HERE TO REPLY OR SOMETHING</div>
+		
+		<div id="replyForeground" class="foreground">
+			<img id="replyForeground" src="images/reply_foreground.png"/>
+		</div>
+		
+		<div id="replyBox" class="textBox" data-stellar-ratio="0.6">Coming Soon!</div>
 		
 	</div>
 </div>
