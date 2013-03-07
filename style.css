@@ -72,7 +72,7 @@ html,body {
 .slide {
   background-attachment: fixed;
   width:100%;
-  height:900px;
+  height:1000px;
   position: relative;
   box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
   
@@ -98,6 +98,7 @@ html,body {
 #slideIntro {
   background-attachment: fixed;
   background:url(images/bus-background.jpg);
+  z-index:1;
 }
 
 #introForeground {
@@ -110,7 +111,7 @@ html,body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  z-index:2;
+  z-index:3;
 }
 
 #introBox {
@@ -122,7 +123,7 @@ html,body {
   height:200px;
   text-align:center;
   box-shadow:5px 5px 5px #000;
-  z-index:1;
+  z-index:2;
   font-size:20px;
   margin:60px 0px 0px 0px;
 }
@@ -132,8 +133,8 @@ html,body {
 *******************/
 #slideStory {
   background-attachment: fixed;
-  background:url(images/wedding_background.jpg);
-  margin:200px 0 0;
+  background:url(images/st_stephens_background.jpg);
+  margin:0px 0 0;
   z-index:2;
 }
 
@@ -147,7 +148,7 @@ html,body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  z-index:2;
+  z-index:3;
 }
 
 #storyBox {
@@ -156,22 +157,125 @@ html,body {
   right:3%;
   background:#700000;
   width:500px;
-  height:90%;
+  height:80%;
   text-align:center;
   box-shadow:5px 5px 5px #000;
-  z-index:3;
+  z-index:4;
   font-size:20px;
-  margin:60px 20px 20px 20px;
+  padding:20px 30px 30px 0;
 }
 
 /******************
   Wedding
 *******************/
+#slideWedding {
+  background-attachment: fixed;
+  background:url(images/wedding_background.jpg);
+  margin:0px 0 0;
+  z-index:3;
+}
+
+#weddingForeground {
+  background-attachment: fixed;
+  position:relative;
+  bottom:0px;
+  right:0px;
+  height:100%;
+  width:100%;
+  z-index:4;
+}
+
+#curiodysseySign {
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  z-index:5;
+}
+
+#weddingBox {
+  position:absolute;
+  top:5%;
+  left:2%;
+  background:#700000;
+  width:500px;
+  height:400px;
+  text-align:center;
+  box-shadow:5px 5px 5px #000;
+  z-index:3;
+  font-size:20px;
+  padding:10px 10px 10px 0;
+}
 
 /******************
-  Gift
+  Registry
 *******************/
+#slideRegistry {
+  background-attachment: fixed;
+  background:url(images/halong_background.jpg);
+  margin:0px 0 0;
+  z-index:1;
+}
+
+#registryForeground {
+  background-attachment: fixed;
+  position:relative;
+  height:100%;
+  width:100%;
+  background:url(images/halong_foreground.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index:8;
+}
+
+#registryBox {
+  position:absolute;
+  top:5%;
+  left:20%;
+  background:#700000;
+  width:500px;
+  height:400px;
+  text-align:center;
+  box-shadow:5px 5px 5px #000;
+  z-index:6;
+  font-size:20px;
+  padding:10px 10px 10px 0;
+}
 
 /******************
   Reply
 *******************/
+#slideReply {
+  background-attachment: fixed;
+  background:url(images/reply_background.jpg);
+  margin:0px 0 0;
+  z-index:1;
+}
+
+#replyForeground {
+  background-attachment: fixed;
+  position:relative;
+  height:100%;
+  width:100%;
+  background:url(images/reply_foreground.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index:8;
+}
+
+#replyBox {
+  position:absolute;
+  top:0;
+  right:2%;
+  background:#700000;
+  width:600px;
+  height:350px;
+  text-align:center;
+  box-shadow:5px 5px 5px #000;
+  z-index:6;
+  font-size:20px;
+  padding:50px 10px 10px 0;
+}
