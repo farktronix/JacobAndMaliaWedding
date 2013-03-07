@@ -11,6 +11,26 @@ html,body {
 }
 
 /************* 
+  Mobile 
+**************/
+
+.mobile body {
+  overflow: hidden;
+}
+
+.mobile #wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mobile #scroller {
+  height: 5000px;
+}
+
+/************* 
   Navigation 
 **************/
 

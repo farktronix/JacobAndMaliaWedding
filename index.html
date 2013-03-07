@@ -3,6 +3,7 @@
 <html>
 <head> 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
 
 <!-- 
 TODO:
@@ -18,11 +19,14 @@ TODO:
 <script type="text/javascript" src="scripts/jquery.stellar.js"></script>
 <script type="text/javascript" src="scripts/waypoints.js"></script>
 <script type="text/javascript" src="scripts/jquery.easing.min.js"></script>
+<script type="text/javascript" src="scripts/iscroll.js"></script>
 
 <!-- PRODUCTION
 <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.stellar.min.js"></script>
 <script type="text/javascript" src="scripts/waypoints.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.easing.min.js"></script>
+<script type="text/javascript" src="scripts/iscroll.js"></script>
 -->
 
 <script type="text/javascript" src="scripts/main.js"></script>
@@ -30,6 +34,8 @@ TODO:
 </head>
 
 <body>
+<div id="iScrollWrapper">
+<div id="iScrollScroller">
 <div class="navigation">
 	<div id="logo"><img id="logo" src="images/logo.png" alt="Prime Meridian Logo" data-slide="1" /></div>
 	<ul class="navItems">
@@ -41,6 +47,7 @@ TODO:
 	</ul>
 </div>
 
+<section>
 <div class="slide" id="slideIntro" data-slide="1" data-stellar-background-ratio="0.6">
 	<div class="wrapper">
 		<div id="introForeground" data-stellar-ratio="1"></div>
@@ -88,6 +95,10 @@ TODO:
 		<div id="replyBox" data-stellar-ratio="0.6">CLICK HERE TO REPLY OR SOMETHING</div>
 		
 	</div>
+</div>
+
+</section>
+</div>
 </div>
 </body>
 </html>

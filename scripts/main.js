@@ -1,7 +1,31 @@
 // Thanks to http://webdesign.tutsplus.com/tutorials/complete-websites/create-a-parallax-scrolling-website-using-stellar-js/
-
 jQuery(document).ready(function ($) {
-  $(window).stellar();
+  var ua = navigator.userAgent, isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+  if (isMobileWebkit) {
+    $('html').addClass('mobile');
+  }
+
+  $(function(){
+     var iScrollInstance;
+
+     if (isMobileWebkit) {
+       iScrollInstance = new iScroll('iScrollWrapper');
+
+       $('#scroller').stellar({
+         scrollProperty: 'transform',
+         positionProperty: 'transform',
+         horizontalScrolling: false,
+       });
+     } else {
+       $.stellar({
+         horizontalScrolling: false,
+       });
+     }
+   });
+    // 
+    // $(window).stellar({
+    //   horizontalScrolling: false
+    // });
   var links = $('.navItems').find('li');
       slide = $('.slide');
       mywindow = $(window);
