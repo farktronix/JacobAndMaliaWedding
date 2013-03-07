@@ -10,10 +10,10 @@ html,body {
 
 .navigation {
   background:#700000;
-  height:400px;
-  width:154px;
-  right:2%;
-  top:5px;
+  height:50px;
+  width:400px;
+  left:30%;
+  top:0px;
   margin:0px 0px 0px 0px;
   position:fixed;
   z-index:999;
@@ -23,23 +23,24 @@ html,body {
 }
 
 .navigation ul {
+  display:inline;
   position:relative;
   display:block;
   list-style:none;
   text-align:center;
   text-shadow:#000 0 1px 2px;
-  margin: 0;
+  margin: 15px;
   padding: 0;
 }
 
 .navigation li {
-  display:block;
+  display:inline;
   position:relative;
   margin-left:auto;
   margin-right:auto;
   width:100%;
   color:#fff;
-  padding:15px 0px;
+  padding:.5em .75em;
   -webkit-transition: all .2s ease-in-out;
 }
 
@@ -50,8 +51,9 @@ html,body {
 }
 
 #logo {
-  position:relative;
-  width:99%;
+  display:none;
+  position:absolute;
+  height:75%;
   left:1%;
   top:2%;
 }
@@ -106,15 +108,16 @@ html,body {
 
 #introBox {
   position:absolute;
-  top:50%;
-  left:35%;
-  background:gray;
-  width:200px;
-  height:100px;
+  top:30%;
+  left:30%;
+  background:#700000;
+  width:400px;
+  height:200px;
   text-align:center;
   box-shadow:5px 5px 5px #000;
   z-index:1;
   font-size:20px;
+  margin:60px 0px 0px 0px;
 }
 
 /******************
@@ -122,8 +125,36 @@ html,body {
 *******************/
 #slideStory {
   background-attachment: fixed;
-  background:url(images/cigar.jpg);
-  margin:10px 0 0;
+  background:url(images/wedding_background.jpg);
+  margin:200px 0 0;
+  z-index:2;
+}
+
+#storyForeground {
+  background-attachment: fixed;
+  position:relative;
+  width:60%;
+  height:100%;
+  background:url(images/dino.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index:2;
+}
+
+#storyBox {
+  position:absolute;
+  top:5%;
+  right:3%;
+  background:#700000;
+  width:500px;
+  height:90%;
+  text-align:center;
+  box-shadow:5px 5px 5px #000;
+  z-index:3;
+  font-size:20px;
+  margin:60px 20px 20px 20px;
 }
 
 /******************
