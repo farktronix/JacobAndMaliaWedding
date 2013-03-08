@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
      if (isMobileWebkit) {
        iScrollInstance = new iScroll('iScrollWrapper');
 
-       $('#scroller').stellar({
+       $('#iScrollScroller').stellar({
          scrollProperty: 'transform',
          positionProperty: 'transform',
          horizontalScrolling: false,
@@ -26,8 +26,10 @@ jQuery(document).ready(function ($) {
   // Resize all foreground elements to fit the window
   $(window).resize(function(){
     $('.foreground').css("height", $(window).height() + 'px');
+    $('#slideIntro').css("height", $(window).height() + 'px');
   });  
   $('.foreground').css("height", $(window).height() + 'px');
+  $('#slideIntro').css("height", $(window).height() + 'px');
    
   var links = $('.navItems').find('li');
       slide = $('.slide');
@@ -49,6 +51,19 @@ jQuery(document).ready(function ($) {
             $('.navItems li[data-slide="' + dataslide + '"]').addClass('active').next().removeClass('active');
         }
     });
+    
+    // When the bottom of the slide appears on the screen, stick Jacob and Malia to the bottom of the slide
+    // $('#slideIntro').waypoint(function () {
+    //   $('#introForeground').attr('data-stellar-ratio', 0.6);
+    // }, { offset: '100%' });
+    // 
+    // // When the bottom of the slide reaches the top of the screen, set Malia and Jacob free again
+    // $('#slideIntro').waypoint(function (direction) {
+    //   if (direction == "up") {
+    //     $('#introForeground').attr('data-stellar-ratio', -0.1);
+    //   }
+    // }, { offset: '-100%' });
+    
     //waypoints doesnt detect the first slide when user scrolls back up to the top so we add this little bit of code, that removes the class
     //from navigation link slide 2 and adds it to navigation link slide 1.
     mywindow.scroll(function () {
@@ -62,7 +77,7 @@ jQuery(document).ready(function ($) {
     //easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
     function goToByScroll(dataslide) {
         htmlbody.animate({
-            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top + 250
+            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
         }, 2000, 'easeInOutQuint');
     }
     //When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
