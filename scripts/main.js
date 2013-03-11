@@ -52,18 +52,6 @@ jQuery(document).ready(function ($) {
         }
     });
     
-    // When the bottom of the slide appears on the screen, stick Jacob and Malia to the bottom of the slide
-    // $('#slideIntro').waypoint(function () {
-    //   $('#introForeground').attr('data-stellar-ratio', 0.6);
-    // }, { offset: '100%' });
-    // 
-    // // When the bottom of the slide reaches the top of the screen, set Malia and Jacob free again
-    // $('#slideIntro').waypoint(function (direction) {
-    //   if (direction == "up") {
-    //     $('#introForeground').attr('data-stellar-ratio', -0.1);
-    //   }
-    // }, { offset: '-100%' });
-    
     //waypoints doesnt detect the first slide when user scrolls back up to the top so we add this little bit of code, that removes the class
     //from navigation link slide 2 and adds it to navigation link slide 1.
     mywindow.scroll(function () {
