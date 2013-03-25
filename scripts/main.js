@@ -30,6 +30,13 @@ jQuery(document).ready(function ($) {
   });  
   $('.foreground').css("height", $(window).height() + 'px');
   $('#slideIntro').css("height", $(window).height() + 'px');
+  
+  
+  $("#introBackground").backstretch("images/alps_background.jpg");
+  $("#storyBackground").backstretch("images/st_stephens_background.jpg");
+  $("#weddingBackground").backstretch("images/wedding_background.jpg");
+  $("#registryBackground").backstretch("images/halong_background.jpg");
+  $("#replyBackground").backstretch("images/reply_background.jpg");
    
   var links = $('.navItems').find('li');
       slide = $('.slide');

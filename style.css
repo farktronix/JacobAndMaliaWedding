@@ -44,12 +44,15 @@ html,body {
   position: relative;
   box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
   
+  background: no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   
   z-index:1;
+  
+  border:thick solid green;
 }
 
 .wrapper {
@@ -66,6 +69,18 @@ html,body {
   width:100%;
   height:100%;
   bottom:0px;
+}
+
+.background {
+  position:absolute;
+  background-attachment:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  
+  opacity:0.2;
+  border:thin solid red;
 }
 
 .textBox {
@@ -88,6 +103,7 @@ html,body {
   top:0px;
   margin:0px 0px 0px 0px;
   position:fixed;
+  opacity:0.90;
   z-index:999;
   -moz-box-shadow:-5px -1px 5px #000, 5px -1px 5px #000, 0px 2px 7px 2px #000;
   -webkit-box-shadow:-5px -1px 5px #000, 5px -1px 5px #000, 0px 2px 7px 2px #000;
@@ -135,9 +151,12 @@ html,body {
   Intro
 *******************/
 #slideIntro {
-  background:url(images/alps_background.jpg);
   height:500px;
   z-index:100;
+}
+
+#introBackground {
+  height:500px;
 }
 
 #introForeground {
@@ -184,7 +203,6 @@ html,body {
   Story
 *******************/
 #slideStory {
-  background:url(images/st_stephens_background.jpg);
   height:800px;
   z-index:200;
 }
@@ -209,7 +227,6 @@ html,body {
   Wedding
 *******************/
 #slideWedding {
-  background:url(images/wedding_background.jpg);
   height:1000px;
   z-index:300;
 }
@@ -235,7 +252,6 @@ html,body {
   Registry
 *******************/
 #slideRegistry {
-  background:url(images/halong_background.jpg);
   z-index:400;
 }
 
@@ -260,9 +276,11 @@ html,body {
   Reply
 *******************/
 #slideReply {
-  background:url(images/reply_background.jpg);
-  background-position:25%;
   z-index:500;
+}
+
+#replyBackground {
+  background-position:25%;
 }
 
 #replyForeground {
