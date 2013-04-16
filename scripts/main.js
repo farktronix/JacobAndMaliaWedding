@@ -4,39 +4,43 @@ jQuery(document).ready(function ($) {
   if (isMobileWebkit) {
     $('html').addClass('mobile');
   }
+  
+  var resizeElements = function() {
+      var windowHeight = $(window).height();
+      var diff = windowHeight - $('#slideIntro').css("height");
+      
+      $('#introForeground').css("height", windowHeight + 'px');
+      $('#introBackground').css("height", windowHeight + 'px');
+      $('#slideIntro').css("height", windowHeight + 'px');
+      
+      // $('.background').each(function(index) {
+      //   if ($(this) != $('#introBackground')) {
+      //     $(this).css("top", $(this).css("top") + diff);
+      //   }
+      // });
+  };
+  
+  // Resize all foreground elements to fit the window
+  $(window).resize(function() {resizeElements();});
+  resizeElements();
 
   $(function(){
      var iScrollInstance;
 
      if (isMobileWebkit) {
-       iScrollInstance = new iScroll('iScrollWrapper');
-
-       $('#iScrollScroller').stellar({
-         scrollProperty: 'transform',
-         positionProperty: 'transform',
-         horizontalScrolling: false,
-       });
+       // iScrollInstance = new iScroll('iScrollWrapper');
+       // 
+       // $('#iScrollScroller').stellar({
+       //   scrollProperty: 'transform',
+       //   positionProperty: 'transform',
+       //   horizontalScrolling: false,
+       // });
      } else {
        $.stellar({
          horizontalScrolling: false,
        });
      }
   });
-  
-  // Resize all foreground elements to fit the window
-  $(window).resize(function(){
-    $('.foreground').css("height", $(window).height() + 'px');
-    $('#slideIntro').css("height", $(window).height() + 'px');
-  });  
-  $('.foreground').css("height", $(window).height() + 'px');
-  $('#slideIntro').css("height", $(window).height() + 'px');
-  
-  
-  $("#introBackground").backstretch("images/alps_background.jpg");
-  $("#storyBackground").backstretch("images/st_stephens_background.jpg");
-  $("#weddingBackground").backstretch("images/wedding_background.jpg");
-  $("#registryBackground").backstretch("images/halong_background.jpg");
-  $("#replyBackground").backstretch("images/reply_background.jpg");
    
   var links = $('.navItems').find('li');
       slide = $('.slide');
