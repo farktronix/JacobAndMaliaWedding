@@ -282,6 +282,7 @@ html,body {
 *******************/
 #slideWedding {
   z-index:300;
+  height:1200px;
 }
 
 #weddingBackground {
@@ -299,10 +300,27 @@ html,body {
 #weddingBox {
   position:absolute;
   left:10%;
-  width:600px;
-  height:400px;
-  top:150px;
+  width:800px;
+  height:800px;
+  top:100px;
   z-index:3;
+}
+
+#googleMap {
+	height: 350px; 
+	width: 300px;
+}
+
+.weddingList li {
+  color: white;
+}
+
+#listOfStuffToBring {
+  text-align:left;
+}
+
+#listOfStuffToLeave {
+  text-align:left;
 }
 
 /******************
@@ -310,6 +328,7 @@ html,body {
 *******************/
 #slideRegistry {
   z-index:400;
+  height:1400px;
 }
 
 #registryBackground {
@@ -328,8 +347,8 @@ html,body {
   position:absolute;
   top:200px;
   left:12%;
-  width:600px;
-  height:300px;
+  width:800px;
+  height:600px;
   z-index:3;
 }
 
@@ -357,7 +376,7 @@ html,body {
   position:absolute;
   bottom:35%;
   left:2%;
-  width:600px;
-  height:300px;
+  width:700px;
+  height:500px;
   z-index:6;
 }

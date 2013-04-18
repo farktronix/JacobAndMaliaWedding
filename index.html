@@ -5,6 +5,60 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
 
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6NeZ9eUReDCd4L0bogXivT3okV5TAcyE&sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize() {
+	  var styles = [
+			{
+			    "featureType": "poi.park",
+			    "stylers": [
+			    	{ "visibility": "simplified" },
+			      { saturation: -60 }
+			    ]
+			  },
+		    {
+		      featureType: "all",
+		      elementType: "all",
+		      stylers: [
+		        { saturation: -100 }
+		      ]
+		    }
+		];
+	
+		var styledMap = new google.maps.StyledMapType(styles,
+		    {name: "Styled Map"});
+	
+    var mapOptions = {
+      center: new google.maps.LatLng(37.590534,-122.31965),
+      zoom: 9,
+			disableDefaultUI: true,
+			zoomControl: true,
+			zoomControlOptions: {
+				style: google.maps.ZoomControlStyle.SMALL
+			},
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),
+        mapOptions);
+
+	  map.mapTypes.set('map_style', styledMap);
+	  map.setMapTypeId('map_style');
+	
+		var curiodysseyOLogo = 'images/curiodyssey_O.png';
+		var curiodysseyLatlng = new google.maps.LatLng(37.590534,-122.31965);
+		var curiodyssey = new google.maps.Marker({
+		      position: curiodysseyLatlng,
+		      map: map,
+		      title:"CuriOdyssey",
+					icon: curiodysseyOLogo
+		  });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 <!-- 
 TODO:
 	- Convert the scripts to their -min variants before shipping
@@ -19,16 +73,12 @@ TODO:
 <script type="text/javascript" src="scripts/jquery.stellar.js"></script>
 <script type="text/javascript" src="scripts/waypoints.js"></script>
 <script type="text/javascript" src="scripts/jquery.easing.min.js"></script>
-<script type="text/javascript" src="scripts/iscroll.js"></script>
-<script type="text/javascript" src="scripts/jquery.backstretch.js"></script>
 
 <!-- PRODUCTION
 <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.stellar.min.js"></script>
 <script type="text/javascript" src="scripts/waypoints.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.easing.min.js"></script>
-<script type="text/javascript" src="scripts/iscroll.js"></script>
-<script type="text/javascript" src="scripts/jquery.backstretch.min.js"></script>
 -->
 
 <script type="text/javascript" src="scripts/main.js"></script>
@@ -130,7 +180,28 @@ TODO:
 		</div>
 
 		<div id="weddingBox" class="textBox">
-			
+			<p class="storyName">Wedding Day Information</p>
+			<img src="images/coyoteptmuseum_logo.png" />
+			<p class="storyText">
+				The wedding and reception are both located at the Coyote Point Recreation Area in San Mateo.
+			</p>
+			<p class="storyText">
+				Wedding starts promptly at 4pm. Reception to follow.
+			</p>
+			<p class="storyText">
+				Bring:
+				<ul class="weddingList" id="listOfStuffToBring">
+				<li>Picnic Blankets
+				<li>Good shoes for outdoors
+				<li>Wizard hat and robe
+				</ul>
+				Leave at home:
+				<ul class="weddingList" id="listOfStuffToLeave">
+				<li>Your own car (parking is limited- please carpool!)
+				<li>Cigarettes (no smoking in Coyote Point)
+				</ul>
+			</p>
+			<div id="googleMap"/>
 		</div>
 		
 	</div>
@@ -147,7 +218,7 @@ TODO:
 		</div>
 		
 		<div id="registryBox" class="textBox" data-stellar-ratio="0.8">
-			Registry Info
+			<p class="storyName">Registry</p>
 		</div>
 		
 	</div>
@@ -163,7 +234,9 @@ TODO:
 			<img id="replyForeground" src="images/reply_foreground.png"/>
 		</div>
 		
-		<div id="replyBox" class="textBox" data-stellar-ratio="0.85">Coming Soon!</div>
+		<div id="replyBox" class="textBox" data-stellar-ratio="0.85">
+			<p class="storyName">RSVP Coming Soon!</p>
+		</div>
 		
 	</div>
 	
