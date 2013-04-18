@@ -27,9 +27,11 @@ jQuery(document).ready(function ($) {
       
       $('#usStoryBox').css("left", ($('#slideStory').outerWidth() - $('#usStoryBox').outerWidth()) / 2);
 
-      $.stellar({
-        horizontalScrolling: false,
-      });
+      if (!isMobileWebkit) {
+        $.stellar({
+          horizontalScrolling: false,
+        });
+      }
   };
   
   // Resize all foreground elements to fit the window
