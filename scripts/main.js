@@ -7,22 +7,39 @@ jQuery(document).ready(function ($) {
   
   var resizeElements = function() {
       var windowHeight = $(window).height();
-      var diff = windowHeight - $('#slideIntro').css("height");
       
       $('#introForeground').css("height", windowHeight + 'px');
       $('#introBackground').css("height", windowHeight + 'px');
       $('#slideIntro').css("height", windowHeight + 'px');
       
-      // $('.background').each(function(index) {
-      //   if ($(this) != $('#introBackground')) {
-      //     $(this).css("top", $(this).css("top") + diff);
-      //   }
-      // });
+      var farkRight = $('#farkasBus').offset().left + $('#farkasBus').outerWidth();
+      var maliaLeft = $('#maliaBus').offset().left;
+      $('#introBox').css("left", (farkRight + ((maliaLeft - farkRight) / 2) - ($('#introBox').outerWidth() / 2)) + 'px');
+      
+      var maliaStoryRight = $('#maliaStoryBox').offset().left + $('#maliaStoryBox').outerWidth();
+      var farkasStoryLeft = $('#jacobStoryBox').offset().left;
+      var dinoOverlap = $('#maliaStoryBox').outerWidth() * 0.2;
+      var prevHeight = $('#dinoAttack').outerHeight();
+      $('#dinoAttack').css("width", farkasStoryLeft - maliaStoryRight + dinoOverlap + 'px');
+      $('#dinoAttack').css("left", maliaStoryRight - (dinoOverlap / 2) + 'px');
+      var curHeight = $('#dinoAttack').outerHeight();
+      $('#dinoAttack').css("bottom", parseInt($('#dinoAttack').css("bottom"), 10) + Math.sqrt(prevHeight - curHeight) + 'px');
+      
+      $('#usStoryBox').css("left", ($('#slideStory').outerWidth() - $('#usStoryBox').outerWidth()) / 2);
+
+      $.stellar({
+        horizontalScrolling: false,
+      });
   };
   
   // Resize all foreground elements to fit the window
   $(window).resize(function() {resizeElements();});
+  $(window).ready(function() {resizeElements();});
   resizeElements();
+  
+  $('#usStoryBox').load(function() {
+    $('#dinoAttack').css("bottom", $('#slideStory').outerHeight() - $('#usStoryBox').position().top - ($('#dinoAttack').outerHeight() * .15) + 'px');
+  });
 
   $(function(){
      var iScrollInstance;

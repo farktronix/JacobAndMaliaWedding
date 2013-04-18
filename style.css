@@ -212,7 +212,7 @@ html,body {
 #introBox {
   position:absolute;
   top:150px;
-  left:20%;
+  left:25%;
   width:400px;
   height:200px;
   z-index:101;
@@ -222,7 +222,7 @@ html,body {
   Story
 *******************/
 #slideStory {
-  height:1000px;
+  height:1300px;
   z-index:200;
 }
 
@@ -230,19 +230,10 @@ html,body {
   background-image:url("images/st_stephens_background.jpg");
 }
 
-#dinoBox {
-  position:absolute;
-  left:0px;
-  bottom:0px;
-  width:100%;
-  height:100%;
-  z-index:3;
-}
-
 #dinoAttack {
   position:absolute;
-  left:250px;
-  bottom:0px;
+  left:240px;
+  bottom:400px;
   max-width:100%;
   max-height:100%;
   z-index:3;
@@ -252,8 +243,8 @@ html,body {
   position:absolute;
   top:150px;
   width:250px;
-  height:600px;
-  z-index:4;
+  height:575px;
+  z-index:5;
 }
 
 #maliaStoryBox {
@@ -262,6 +253,13 @@ html,body {
 
 #jacobStoryBox {
   right:3%;
+}
+
+#usStoryBox {
+  left:10%;
+  top:780px;
+  width:800px;
+  height:300px;
 }
 
 .storyPic {
@@ -275,6 +273,7 @@ html,body {
 }
 
 .storyText {
+  color:white;
   font-size:12pt;
 }
 
