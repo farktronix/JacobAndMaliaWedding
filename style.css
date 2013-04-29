@@ -1,14 +1,4 @@
 @font-face {
-    font-family: "1942 report";
-    src: url('1942.ttf');
-}
-
-@font-face {
-    font-family: "lobstertwobold";
-    src: url('lobstertwobold.ttf');
-}
-
-@font-face {
     font-family: "Walkway";
     src: url('Walkway_SemiBold.ttf');
 }
@@ -19,26 +9,6 @@ html,body {
   max-width:100%;
   max-height:100%;
   background:black;
-}
-
-/************* 
-  Mobile 
-**************/
-
-.mobile body {
-  overflow: hidden;
-}
-
-.mobile #iScrollWrapper {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.mobile #iScrollScroller {
-  height: 5000px;
 }
 
 /******************
@@ -122,9 +92,8 @@ html,body {
 }
 
 .navigation ul {
-  display:inline;
-  position:relative;
   display:block;
+  position:relative;
   list-style:none;
   text-align:center;
   text-shadow:#000 0 1px 2px;
@@ -142,7 +111,7 @@ html,body {
   padding:.5em .75em;
   -webkit-transition: all .2s ease-in-out;
   font-size:15pt;
-  font-family:"lobstertwobold";
+  font-family:"Lobster Two", cursive;
 }
 
 .navigation li:hover, .active{
@@ -267,7 +236,7 @@ html,body {
 }
 
 .storyName {
-  font-family:"lobstertwobold";
+  font-family:"Lobster Two", cursive;
   color:white;
   font-size:20pt;
 }
@@ -306,21 +275,50 @@ html,body {
   z-index:3;
 }
 
-#googleMap {
-	height: 350px; 
-	width: 300px;
+#noteContainer {
+  position:static;
+  display:block;
+  border: thick solid yellow;
 }
 
-.weddingList li {
-  color: white;
+.sticky {
+  position:absolute;
+  font-family: 'Rancho', cursive;
+  font-size:18px;
+  text-align:center;
+  width:300px;
+  height:150px;
+  color:#000;
+  background:#ffc;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.sticky ul li {
+  list-style: disc;
+  float: left;
+  text-align: left;
 }
 
 #listOfStuffToBring {
-  text-align:left;
+  left:5%;
+  -webkit-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -moz-transform:rotate(-2deg);
 }
 
 #listOfStuffToLeave {
-  text-align:left;
+  right:5%;
+  -webkit-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -moz-transform:rotate(3deg);
+}
+
+#googleMap {
+	height: 350px; 
+	width: 300px;
+	border: thick solid green;
 }
 
 /******************
