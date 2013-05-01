@@ -17,18 +17,10 @@ html,body {
 
 .slide {
   height:1000px;
-
-  background-attachment: fixed;
   width:100%;
-  background-size:100%;
+  
   position: relative;
   box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
-  
-  background: no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   
   z-index:1;
 }
@@ -52,16 +44,32 @@ html,body {
 
 .background {
   position:absolute;
-  background-attachment:fixed;
   width:100%;
   height:100%;
   top:0px;
   left:0px;
   
+  z-index:-1;
+  
+  background-attachment:fixed;
+  background-repeat:no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.backgroundFill {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  
+  z-index:-2;
+  
+  background-attachment:fixed;
+  background-size: 100%;
 }
 
 .textBox {
@@ -133,7 +141,7 @@ html,body {
 }
 
 #introBackground {
-  background-image:url("images/alps_background.jpg");
+  background-image:url("images/alps_background.png");
 }
 
 #introBox {
@@ -196,7 +204,11 @@ html,body {
 }
 
 #storyBackground {
-  background-image:url("images/st_stephens_background.jpg");
+  background-image:url("images/st_stephens_background.png");
+}
+
+#storyBackgroundFill {
+  background-image:url("images/st_stephens_background_fill.png");
 }
 
 #dinoAttack {
@@ -255,7 +267,11 @@ html,body {
 }
 
 #weddingBackground {
-  background-image:url("images/wedding_background.jpg");
+  background-image:url("images/wedding_background.png");
+}
+
+#weddingBackgroundFill {
+  background-image:url("images/wedding_background_fill.png");
 }
 
 #curiodysseySign {
@@ -342,7 +358,9 @@ html,body {
 }
 
 #registryBackground {
-  background-image:url("images/halong_background.jpg");
+  background-image:url("images/halong_background.png");
+  background-repeat:repeat;
+  background-size:100%;
 }
 
 #halong {
@@ -356,7 +374,7 @@ html,body {
 #registryBox {
   position:absolute;
   top:200px;
-  left:12%;
+  left:10%;
   width:800px;
   height:600px;
   z-index:3;
@@ -371,7 +389,7 @@ html,body {
 
 #replyBackground {
   background-position:25%;
-  background-image:url("images/reply_background.jpg");
+  background-image:url("images/reply_background.png");
 }
 
 #replyForeground {
@@ -389,4 +407,9 @@ html,body {
   width:700px;
   height:500px;
   z-index:6;
+}
+
+#RSVPPlaceholder {
+  margin-top:30%;
+  font-size:40px;
 }
