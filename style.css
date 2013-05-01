@@ -81,6 +81,12 @@ html,body {
   padding:0px 10px 20px 10px;
 }
 
+.textBox H1 {
+  font-family:"Lobster Two", cursive;
+  color:white;
+  font-size:20pt;
+}
+
 /************* 
   Navigation 
 **************/
@@ -248,15 +254,76 @@ html,body {
   padding: 4px 0 0 0;
 }
 
-.storyName {
-  font-family:"Lobster Two", cursive;
-  color:white;
-  font-size:20pt;
-}
-
 .storyText {
   color:white;
   font-size:12pt;
+}
+
+/******************
+  People
+*******************/
+#slidePeople {
+  z-index:300;
+  height:1000px;
+}
+
+#peopleBackground {
+  background-image:url("images/people_background.png");
+}
+
+#peopleBackgroundFill {
+  background-image:url("images/people_background_fill.png");
+}
+
+#peopleBox {
+  position:absolute;
+  left:15%;
+  top:200px;
+  width:750px;
+  height:400px;
+  z-index:5;
+}
+
+.personBubble {
+  position:relative;
+  display:box;
+  
+  width:75px;
+  height:75px;
+  
+  margin: 20px;
+  float:left;
+  
+  background-size: cover;
+}
+
+.personBubble:hover {
+  width:100px;
+  height:100px;
+}
+
+#kalani {
+  background-image:url("images/kalani.png");
+}
+
+#anakela {
+  background-image:url("images/ana.png");
+}
+
+#melissa {
+  background-image:url("images/melissa.png");
+}
+
+#evan {
+  background-image:url("images/evan.png");
+}
+
+#jordan {
+  background-image:url("images/jordan.png");
+}
+
+#noe {
+  background-image:url("images/noe.png");
 }
 
 /******************
@@ -351,6 +418,31 @@ html,body {
 }
 
 /******************
+  Travel
+*******************/
+#slideTravel {
+  z-index:300;
+  height:1200px;
+}
+
+#travelBackground {
+  background-image:url("images/wedding_background.png");
+}
+
+#travelBackgroundFill {
+  background-image:url("images/wedding_background_fill.png");
+}
+
+#travelBox {
+  position:absolute;
+  left:40%;
+  top:130px;
+  width:250px;
+  z-index:5;
+}
+
+
+/******************
   Registry
 *******************/
 #slideRegistry {
@@ -404,7 +496,7 @@ html,body {
 #replyBox {
   position:absolute;
   bottom:35%;
-  left:2%;
+  left:5%;
   width:700px;
   height:500px;
   z-index:6;
