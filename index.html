@@ -7,12 +7,17 @@
 <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
 
-<!-- 
-TODO:
-	- Convert the scripts to their -min variants before shipping
--->
-
 <title>Jacob & Malia</title>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40271596-1', 'jacobandmalia.com');
+  ga('send', 'pageview');
+</script>
 
 <link rel="stylesheet" href="style.css" type="text/css"/>
 
@@ -25,16 +30,6 @@ TODO:
 -->
 
 <!-- PRODUCTION -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-40271596-1', 'jacobandmalia.com');
-  ga('send', 'pageview');
-</script>
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.stellar.min.js"></script>
 <script type="text/javascript" src="scripts/waypoints.min.js"></script>
@@ -54,7 +49,9 @@ TODO:
 	<ul class="navItems">
 		<li data-slide="1">Intro</li>
 		<li data-slide="2">Story</li>
+<!--
 		<li data-slide="3">People</li>
+-->
 		<li data-slide="4">Event</li>
 		<li data-slide="5">Travel</li>
 		<li data-slide="6">Registry</li>
@@ -134,7 +131,7 @@ TODO:
 	<div id="storyBackgroundFill" class="backgroundFill" data-stellar-background-ratio="0.6"></div>
 </div>
 
-
+<!--
 <div class="slide" id="slidePeople" data-slide="3">	
 	<div class="wrapper">
 		<div id="peopleBox" class="textBox" data-stellar-ratio=".85">
@@ -154,13 +151,13 @@ TODO:
 	<div id="peopleBackground" class="background" data-stellar-background-ratio="0.6"></div>
 	<div id="peopleBackgroundFill" class="backgroundFill" data-stellar-background-ratio="0.6"></div>
 </div>
+-->
 
 <div class="slide" id="slideWedding" data-slide="4">	
 	<div class="wrapper">
 		
 		<div id="weddingForeground" class="foreground">
 				<img id="curiodysseySign" src="images/curiodyssey_sign_foreground.png"/>
-
 		</div>
 
 		<div id="weddingBox" class="textBox">
@@ -213,8 +210,38 @@ TODO:
 	<div class="wrapper">
 			<div id="travelBox" class="textBox" data-stellar-ratio=".85">
 				<h1>Travel Information</h1>
+				
+				<h2>Getting There</h2>
+				<p class="storyText">There are three airports around the bay, SFO, SJC and OAK.  The wedding will be just south of SFO, so that is probably your best airport option.  SJC is just south of where we live in Sunnyvale and about a 35 minute drive to the wedding venue.  OAK is just across the bay from the wedding venue and also about a 35 minute drive.</p>
+				
+				<h2>Accomodations</h2>
+				<div id="hotelContainer" class="storyText">
+					We have blocks reserved at two hotels:<br><br>
+					<div id="residenceHotel" class="hotelInfo">
+						<a href="http://www.marriott.com/hotels/travel/SFOSM?groupCode=FARFARA&app=resvlink&fromDate=10/18/13&toDate=10/20/13&stop_mobi=yes"><img src="images/residence_inn_logo_color.png"/></a><br>
+						Standard: $129<br>
+						Penthouse: $179<br>
+						<a href="http://www.marriott.com/hotels/travel/SFOSM?groupCode=FARFARA&app=resvlink&fromDate=10/18/13&toDate=10/20/13&stop_mobi=yes">Book here</a>
+					</div>
+					<div id="hiltonHotel" class="hotelInfo">
+						<a href="http://www3.hilton.com/en/hotels/california/hilton-san-francisco-airport-bayfront-SFOAPHF/index.html"><img src="images/hilton.png"/></a><br>
+						<a href="http://www3.hilton.com/en/hotels/california/hilton-san-francisco-airport-bayfront-SFOAPHF/index.html">Book here</a>
+					</div>
+				</div>
+				
+				<h2>What to do</h2>
+				<div id="favoriteThings" class="storyText">
+					Here are some of our favorite things to do in the Bay Area:<br>
+					<a href="http://exploratorium.edu"><img src="images/exploratorium.gif" /></a>
+					<a href="http://www.shabuway.com"><img src="images/shabuway.png" style="height:100px"/></a>
+				</div>
+			</div>
+			
+			<div id="travelForeground" class="foreground">
+
 			</div>
 	</div>
+	
 	
 	<div id="travelBackground" class="background" data-stellar-background-ratio="0.6"></div>
 	<div id="travelBackgroundFill" class="backgroundFill" data-stellar-background-ratio="0.6"></div>
@@ -227,8 +254,14 @@ TODO:
 			<img id="halong" src="images/halong_foreground.png"/>
 		</div>
 		
-		<div id="registryBox" class="textBox" data-stellar-ratio="0.8">
+		<div id="registryBox" class="textBox" data-stellar-ratio="0.9">
 			<h1>Registry</h1>
+			
+			<div id="registries" class="storyText">
+				<a href="http://www.honeyfund.com/wedding/jacobandmalia"><img src="images/honeyfund.jpg"/></a>
+				<a href="http://www.amazon.com/registry/wedding/2JXG5XVBNFYD3"><img src="images/amazon.png"/></a>
+				<a href="http://www.crateandbarrel.com/Gift-Registry/Malia-Francisco-and-Jacob-Farkas/r4995002"><img src="images/crateandbarrel.png"/></a>
+			</div>
 		</div>
 		
 	</div>
@@ -241,13 +274,21 @@ TODO:
 	<div class="wrapper">
 		
 		<div id="replyForeground" class="foreground">
-			<img id="replyForeground" src="images/reply_foreground.png"/>
+				<img id="hands" src="images/hands.png"/>
+		</div>
+		
+		<div id="replyTitle" class="textBox" data-stellar-ratio="0.9">
+			<h1>Reply</h1>
 		</div>
 		
 		<div id="replyBox" class="textBox" data-stellar-ratio="0.85">
 			<h1 id="RSVPPlaceholder">RSVP Coming Soon!</h1>
 		</div>
-		
+<!--
+		<div id="peek" class="foreground" data-stellar-ratio="-.4">
+			<img id="totoro" src="images/totoro.png" />
+		</div>
+-->
 	</div>
 	
 	<div id="replyBackground" class="background"></div>
