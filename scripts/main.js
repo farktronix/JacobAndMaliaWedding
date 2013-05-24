@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
   var resizeElements = function() {
       var windowHeight = $(window).height();
       
+      // Intro slide
       $('#introForeground').css("height", windowHeight + 'px');
       $('#introBackground').css("height", windowHeight + 'px');
       $('#slideIntro').css("height", windowHeight + 'px');
@@ -16,6 +17,7 @@ jQuery(document).ready(function ($) {
       var maliaLeft = $('#maliaBus').offset().left;
       $('#introBox').css("left", (farkRight + ((maliaLeft - farkRight) / 2) - ($('#introBox').outerWidth() / 2)) + 'px');
       
+      // About slide
       var maliaStoryRight = $('#maliaStoryBox').offset().left + $('#maliaStoryBox').outerWidth();
       var farkasStoryLeft = $('#jacobStoryBox').offset().left;
       var dinoOverlap = $('#maliaStoryBox').outerWidth() * 0.2;
