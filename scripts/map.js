@@ -74,7 +74,7 @@ var styledMap = new google.maps.StyledMapType(styles,
     title:"Parking",
 		icon: parkingLogo,
 		clickable: false,
-		zIndex:4
+		zIndex:1
   });
   
   var weddingLogo = 'images/weddingicon.png';
