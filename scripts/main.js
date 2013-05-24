@@ -1,4 +1,8 @@
 // Thanks to http://webdesign.tutsplus.com/tutorials/complete-websites/create-a-parallax-scrolling-website-using-stellar-js/
+var balanceItem = function(item) {
+  item.css("left", ($(window).width() - item.outerWidth())/2);
+};
+
 jQuery(document).ready(function ($) {
   var ua = navigator.userAgent, isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
   if (isMobileWebkit) {
@@ -7,6 +11,7 @@ jQuery(document).ready(function ($) {
   
   var resizeElements = function() {
       var windowHeight = $(window).height();
+      var windowWidth = $(window).width();
       
       // Intro slide
       $('#introForeground').css("height", windowHeight + 'px');
@@ -28,6 +33,20 @@ jQuery(document).ready(function ($) {
       $('#dinoAttack').css("bottom", parseInt($('#dinoAttack').css("bottom"), 10) + Math.sqrt(prevHeight - curHeight) + 'px');
       
       $('#usStoryBox').css("left", ($('#slideStory').outerWidth() - $('#usStoryBox').outerWidth()) / 2);
+      
+      // Event slide
+      balanceItem($('#weddingBox'));
+      
+      // Travel slide
+      balanceItem($('#travelBox'));
+      
+      // Registry slide
+      if (($('#registryBox').offset().left + $('#registryBox').outerWidth()) > windowWidth) {
+        $('#registryBox').css("left", Math.max(0, (windowWidth - $('#registryBox').outerWidth()) / 2));
+      }
+
+      // RSVP slide
+      balanceItem($('#replyBox'));
 
       if (!isMobileWebkit) {
         $.stellar({
