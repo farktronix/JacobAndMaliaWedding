@@ -462,10 +462,14 @@ a img {
   z-index:5;
 }
 
+#travelForeground {
+  pointer-events:none;
+}
+
 #hotelContainer {
   position:relative;
   height:175px;
-  margin-top:40px;
+  margin-top:20px;
 }
 
 .hotelInfo {
