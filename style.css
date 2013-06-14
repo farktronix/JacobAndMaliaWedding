@@ -108,6 +108,11 @@ a img {
   font-size:16pt;
 }
 
+.textBox H4 {
+  color:white;
+  font-size:8pt;
+}
+
 /******************
   iPad
 *******************/
@@ -364,7 +369,7 @@ a img {
 *******************/
 #slideWedding {
   z-index:300;
-  height:1200px;
+  height:1250px;
 }
 
 #weddingBackground {
@@ -415,6 +420,10 @@ a img {
 .sticky ul li {
   list-style: disc;
   text-align: left;
+}
+
+.weddingListIndent li {
+  font-size:14px;
 }
 
 #listOfStuffToBring {
@@ -489,11 +498,13 @@ a img {
 }
 
 #residenceHotel {
-  left:35%;
+  left:30%;
+  max-width:200px;
 }
 
 #hiltonHotel {
-  right:35%;
+  right:30%;
+  max-width:200px;
 }
 
 #favoriteThings {
