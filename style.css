@@ -681,7 +681,7 @@ input:not([type]), input[type="text"]
 
 #replySiteBackground {
   background-position:25%;
-  background-image:url("images/rsvp_background.png");
+  background-image:url("http://jacobandmalia.com/images/rsvp_background.png");
 }
 
 #replyContainer {
