@@ -605,3 +605,93 @@ a img {
   position:absolute;
   bottom:-100px;
 }
+
+/******************
+Reply Site
+*******************/
+#replySiteBody {
+    position:absolute;
+    width:75%;
+    left:12%;
+    top:15%;
+}
+
+input:not([type]), input[type="text"]
+{
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-color: #000000;
+    border: thin solid black;
+}
+
+#replyTextInput {
+    background-color: #ffffff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-color: #000000;
+    border: thick solid black;
+}
+
+#submit {
+    background-color: #ffffff;
+    padding: 10px 30px 10px 30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-color: #000000;
+    border: thick solid black;
+}
+
+#submit:hover {
+    background-color: #b3b3b3;
+}
+
+.replyField {
+    position:relative;
+    width:50%;
+    left:25%;
+    text-align:left;
+    color: white;
+}
+
+.replyField legend {
+    font-family:"Walkway";
+    font-weight:bold;
+    font-size:20px;
+    padding: 5px;
+}
+
+.attendeeCheckbox {
+   font-size: 15px;
+   font-color: #ffffff;
+}
+
+.attendeeLabel {
+    font-size: 15px;
+    font-color: #ffffff;
+}
+
+#replySiteBackground {
+  background-position:25%;
+  background-image:url("images/rsvp_background.png");
+}
+
+#replyContainer {
+  height:100%;
+  width:100%;
+  
+  position: absolute;
+  top:0px;
+  left:0px;
+  box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+  
+  z-index:1;
+}
