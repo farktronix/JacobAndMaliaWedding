@@ -616,7 +616,7 @@ Reply Site
     top:148px
 }
 
-input:not([type]), input[type="text"]
+/*input:not([type]), input[type="text"]
 {
     background-color: #ffffff;
     -moz-border-radius: 5px;
@@ -625,7 +625,49 @@ input:not([type]), input[type="text"]
     font-size: 14px;
     font-color: #000000;
     border: thin solid black;
+}*/
+
+input[type=radio].css-checkbox {
+display:none;
 }
+
+input[type=radio].css-checkbox + label.css-label {
+padding-left:20px;
+height:15px; 
+display:inline-block;
+line-height:15px;
+background-repeat:no-repeat;
+background-position: 0 0;
+font-size:15px;
+vertical-align:middle;
+cursor:pointer;
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+background-position: 0 -15px;
+}
+
+input[type=checkbox].css-checkbox {
+display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+padding-left:20px;
+height:15px; 
+display:inline-block;
+line-height:15px;
+background-repeat:no-repeat;
+background-position: 0 0;
+font-size:15px;
+vertical-align:middle;
+cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+background-position: 0 -15px;
+}
+
+.css-label{ background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png); }
 
 #replyTextInput {
     background-color: #ffffff;
@@ -667,16 +709,6 @@ input:not([type]), input[type="text"]
     font-weight:bold;
     font-size:20px;
     padding: 5px;
-}
-
-.attendeeCheckbox {
-   font-size: 15px;
-   font-color: #ffffff;
-}
-
-.attendeeLabel {
-    font-size: 15px;
-    font-color: #ffffff;
 }
 
 #replySiteBackground {
