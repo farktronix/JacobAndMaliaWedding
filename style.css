@@ -616,17 +616,6 @@ Reply Site
     top:148px
 }
 
-/*input:not([type]), input[type="text"]
-{
-    background-color: #ffffff;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-color: #000000;
-    border: thin solid black;
-}*/
-
 input[type=radio].css-checkbox {
 display:none;
 }
@@ -712,12 +701,11 @@ background-position: 0 -15px;
 }
 
 #replySiteBackground {
-  background-position:25%;
   background-image:url("http://jacobandmalia.com/images/replySiteBackground.png");
 }
 
 #replyContainer {
-  height:100%;
+  height:1000px;
   width:100%;
   
   position: absolute;
