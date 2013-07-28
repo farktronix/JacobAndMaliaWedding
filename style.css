@@ -658,6 +658,43 @@ Reply Site
     padding: 5px;
 }
 
+.replyList ul li {
+    list-style:none;
+    display:block;
+    position: relative;
+    white-space:nowrap;
+    padding: 0 0 10px 42px
+}
+
+.replyList ul input {
+    position: absolute;
+    top: 4px;
+    left: 0
+}
+
+.replyList input {
+    position: absolute;
+    top:4px;
+    left:0px;
+}
+
+.replyList ul .icheckbox_square-red, .replyList ul .iradio_square-red {
+    position: absolute;
+    top: -1px;
+    left: 0
+}
+
+#attendeeInputGuestLabel {
+    display:block;
+    position: relative;
+}
+
+#attendeeInputGuest {
+    position: relative;
+    top:0px;
+    left:0px;
+}
+
 #replySiteBackground {
   background-image:url("http://jacobandmalia.com/images/replySiteBackground.png");
 }
