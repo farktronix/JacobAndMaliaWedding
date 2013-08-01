@@ -155,7 +155,7 @@ a img {
   Wedding
 *******************/
 #slideWedding {
-  height:1800px;
+  height:1875px;
 }
 
 #weddingBackground {
@@ -178,7 +178,7 @@ a img {
   position:absolute;
   left:2%;
   width:96%;
-  height:1125px;
+  height:1350px;
   top:350px;
   z-index:3;
 }
@@ -231,14 +231,11 @@ a img {
 
 #googleMap {
 	height: 350px; 
-	width: 45%;
-	float:left;
+	width: 80%;
+	left:10%;
 }
 
 #curiodysseyInfo {
-  position:absolute;
-  width:52%;
-  right:0px;
   padding-top:20px;
 }
 
