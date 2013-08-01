@@ -3,6 +3,10 @@
     src: url('Walkway_SemiBold.ttf');
 }
 
+html,body {
+    background:black;
+}
+
 a {
   text-decoration:none; 
   color:#3399FF;
@@ -98,6 +102,10 @@ a img {
   font-size:16pt;
 }
 
+.storyText {
+  color:white;
+  font-size:12pt;
+}
 
 /******************
   Intro
@@ -107,7 +115,6 @@ a img {
 }
 
 #introForeground {
-  top:0px;
   bottom:auto;
 }
 
@@ -140,140 +147,15 @@ a img {
   top:10px;
   left:2%;
   width:96%;
-  height:600px;
-  z-index:101;
-}
-
-/******************
-  Story
-*******************/
-#slideStory {
-  height:1300px;
-  z-index:200;
-}
-
-#storyBackground {
-  background-image:url("images/st_stephens_background.png");
-}
-
-#storyBackgroundFill {
-  background-image:url("images/st_stephens_background_fill.png");
-}
-
-#dinoAttack {
-  position:absolute;
-  left:240px;
-  bottom:400px;
-  max-width:100%;
-  max-height:100%;
-  z-index:3;
-}
-
-.storyBox {
-  position:absolute;
-  top:150px;
-  width:250px;
-  height:575px;
-  z-index:5;
-}
-
-#maliaStoryBox {
-  left:2%;
-}
-
-#jacobStoryBox {
-  right:3%;
-}
-
-#usStoryBox {
-  left:10%;
-  top:760px;
-  width:800px;
   height:300px;
-}
-
-.storyPic {
-  padding: 4px 0 0 0;
-}
-
-.storyText {
-  color:white;
-  font-size:12pt;
-}
-
-/******************
-  People
-*******************/
-#slidePeople {
-  z-index:300;
-  height:1000px;
-}
-
-#peopleBackground {
-  background-image:url("images/people_background.png");
-}
-
-#peopleBackgroundFill {
-  background-image:url("images/people_background_fill.png");
-}
-
-#peopleBox {
-  position:absolute;
-  left:15%;
-  top:200px;
-  width:750px;
-  height:400px;
-  z-index:5;
-}
-
-.personBubble {
-  position:relative;
-  display:box;
-  
-  width:75px;
-  height:75px;
-  
-  margin: 20px;
-  float:left;
-  
-  background-size: cover;
-}
-
-.personBubble:hover {
-  width:100px;
-  height:100px;
-}
-
-#kalani {
-  background-image:url("images/kalani.png");
-}
-
-#anakela {
-  background-image:url("images/ana.png");
-}
-
-#melissa {
-  background-image:url("images/melissa.png");
-}
-
-#evan {
-  background-image:url("images/evan.png");
-}
-
-#jordan {
-  background-image:url("images/jordan.png");
-}
-
-#noe {
-  background-image:url("images/noe.png");
+  z-index:101;
 }
 
 /******************
   Wedding
 *******************/
 #slideWedding {
-  z-index:300;
-  height:1200px;
+  height:1800px;
 }
 
 #weddingBackground {
@@ -294,10 +176,10 @@ a img {
 
 #weddingBox {
   position:absolute;
-  left:10%;
-  width:800px;
-  height:800px;
-  top:100px;
+  left:2%;
+  width:96%;
+  height:1125px;
+  top:350px;
   z-index:3;
 }
 
@@ -305,6 +187,7 @@ a img {
   position:relative;
   height:175px;
   margin-top:40px;
+  margin-bottom:40px;
 }
 
 .sticky {
@@ -313,7 +196,7 @@ a img {
   font-size:18px;
   text-align:center;
   width:300px;
-  height:150px;
+  height:200px;
   color:#000;
   background:#fcfccb;
   -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
@@ -334,7 +217,7 @@ a img {
 }
 
 #listOfStuffToLeave {
-  right:5%;
+  left:5%;
   -webkit-transform: rotate(6deg);
   -o-transform: rotate(6deg);
   -moz-transform:rotate(6deg);
