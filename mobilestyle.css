@@ -4,7 +4,6 @@
 }
 
 html,body {
-    background:black;
 }
 
 a {
@@ -35,6 +34,11 @@ a img {
   z-index:1;
 }
 
+.backgroundSlide {
+  width:100%;
+  height:100%;
+}
+
 .wrapper {
   position:relative;
   background-attachment:fixed;
@@ -46,6 +50,7 @@ a img {
 
 .foreground {
   background-attachment:fixed;
+  background-color:transparent;
   position:absolute;
   width:100%;
   height:100%;
@@ -102,9 +107,33 @@ a img {
   font-size:16pt;
 }
 
+.textBox H4 {
+  color:white;
+  font-size:8pt;
+}
+
 .storyText {
   color:white;
   font-size:12pt;
+}
+
+/******************
+  Background
+*******************/
+#backgroundSlide {
+    position:absolute;
+    top:0;
+    left:0;
+    height:2500px;
+    z-index:-1;
+}
+
+#weddingBackground {
+  background-image:url("images/wedding_background.png");
+}
+
+#weddingBackgroundFill {
+  background-image:url("images/wedding_background_fill.png");
 }
 
 /******************
@@ -156,14 +185,6 @@ a img {
 *******************/
 #slideWedding {
   height:1875px;
-}
-
-#weddingBackground {
-  background-image:url("images/wedding_background.png");
-}
-
-#weddingBackgroundFill {
-  background-image:url("images/wedding_background_fill.png");
 }
 
 #curiodysseySign {
@@ -243,7 +264,10 @@ a img {
   Travel
 *******************/
 #slideTravel {
-  z-index:300;
+position:absolute;
+top:1800px;
+z-index:1000;
+width:100%;
 }
 
 #travelBackground {
@@ -255,12 +279,9 @@ a img {
 }
 
 #travelBox {
-  position:absolute;
-  left:18%;
-  top:150px;
-  width:800px;
-  height:600px;
-  z-index:5;
+  left:2%;
+  width:100%;
+  height:580px;
 }
 
 #travelForeground {
@@ -274,15 +295,12 @@ a img {
 }
 
 .hotelInfo {
-  position:absolute;
 }
 
 #residenceHotel {
-  left:35%;
 }
 
 #hiltonHotel {
-  right:35%;
 }
 
 #favoriteThings {
