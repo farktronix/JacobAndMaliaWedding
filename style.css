@@ -189,7 +189,12 @@ a img {
 }
 
 #introBox {
-  
+  position:absolute;
+  top:150px;
+  left:25%;
+  width:400px;
+  height:250px;
+  z-index:101;
 }
 
 .introText {
@@ -197,6 +202,19 @@ a img {
   color:white;
   font-family:"Walkway";
   font-size:15pt;
+  padding:0px;
+}
+
+.introLinkText {
+  text-align:center;
+  font-family:"Walkway";
+  padding:0px;
+}
+
+.emailUsText {
+  text-align:center;
+  font-family:"Walkway";
+  font-size:9pt;
   padding:0px;
 }
 
@@ -228,15 +246,6 @@ a img {
   position:relative;
   max-width:100%;
   z-index:102;
-}
-
-#introBox {
-  position:absolute;
-  top:150px;
-  left:25%;
-  width:400px;
-  height:200px;
-  z-index:101;
 }
 
 /******************
