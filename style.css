@@ -435,14 +435,14 @@ a img {
 }
 
 #listOfStuffToBring {
-  left:5%;
+  left:4%;
   -webkit-transform: rotate(-2deg);
   -o-transform: rotate(-2deg);
   -moz-transform:rotate(-2deg);
 }
 
 #listOfStuffToLeave {
-  right:5%;
+  right:4%;
   -webkit-transform: rotate(6deg);
   -o-transform: rotate(6deg);
   -moz-transform:rotate(6deg);
