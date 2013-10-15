@@ -70,7 +70,7 @@ class UberGallery {
             $this->setThemeName($config['basic_settings']['theme_name']);
             $this->setSortMethod($config['advanced_settings']['images_sort_by'], $config['advanced_settings']['reverse_sort']);
             $this->setDebugging($config['advanced_settings']['enable_debugging']);
-            $this->setCacheDirectory($this->_appDir . '/cache');
+            $this->setCacheDirectory($this->_appDir);
 
             if ($config['basic_settings']['enable_pagination']) {
                 $this->setImagesPerPage($config['advanced_settings']['images_per_page']);
@@ -450,8 +450,7 @@ class UberGallery {
      * @access public
      */
     public function setCacheDirectory($directory) {
-        $this->_config['cache_dir'] = realpath($directory);
-		print("cache: ".$this->_config['cache_dir']."<br>");
+        $this->_config['cache_dir'] = realpath($directory) . "/caches";
 
         return $this;
     }
