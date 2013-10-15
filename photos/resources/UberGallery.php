@@ -451,6 +451,7 @@ class UberGallery {
      */
     public function setCacheDirectory($directory) {
         $this->_config['cache_dir'] = realpath($directory);
+		print("cache: ".$this->_config['cache_dir']."<br>");
 
         return $this;
     }

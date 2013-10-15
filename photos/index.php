@@ -26,7 +26,6 @@ $(document).ready(function(){
 	
 	<?php 
 		include_once('resources/UberGallery.php'); 
-        Directory: print(__FILE__);
 		// Initialize the UberGallery object
         $weddingGallery = new UberGallery();
 
