@@ -87,7 +87,8 @@ class UberGallery {
 
         // Check if cache directory exists and create it if it doesn't
         if (!file_exists($this->_config['cache_dir'])) {
-            $this->setSystemMessage('error', "Cache directory does not exist, please manually create it.");
+            $config = print_r($this->_config['cache_dir'], true);
+            $this->setSystemMessage('error', "Cache directory does not exist, please manually create it. {$config}");
         }
 
         // Check if cache directory is writeable and warn if it isn't
