@@ -25,8 +25,8 @@ $(document).ready(function(){
 	<h1><a href="http://weddingpartyapp.com/e/k5ca6dv">Click here to view the wedding party photos</a></h1>
 	
 	<?php 
-        Directory: print('__DIR__');
 		include_once('resources/UberGallery.php'); 
+        Directory: print(__FILE__);
 		// Initialize the UberGallery object
         $weddingGallery = new UberGallery();
 

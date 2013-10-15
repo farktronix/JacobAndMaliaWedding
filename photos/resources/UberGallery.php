@@ -109,6 +109,7 @@ class UberGallery {
                 $gd = gd_info();
 
                 // Get system and package info
+				date_default_timezone_set('America/Los_Angeles');
                 $timestamp  = date('Y-m-d H:i:s');
                 $ugVersion  = 'UberGallery v' . UberGallery::VERSION;
                 $phpVersion = 'PHP: ' . phpversion();
@@ -1260,9 +1261,10 @@ class UberGallery {
      * @return void
      * @access private
      */
-    private function _errorHandler($errorNum, $errorMsg, $fileName, $lineNum, $vars) {
+    function _errorHandler($errorNum, $errorMsg, $fileName, $lineNum, $vars) {
 
         // Set current timestamp
+		date_default_timezone_set('America/Los_Angeles');
         $time = date('Y-m-d H:i:s');
 
         // Build error type array
