@@ -60,6 +60,7 @@ $(document).ready(function(){
 
 	<h1><a href="http://weddingpartyapp.com/e/k5ca6dv">Click here to view the wedding party photos</a></h1>
 	
+	<h1>Tag your Instagram photos with #farkcisco and they'll appear here</h1>
 	<!-- Start of Flickr Badge -->
 	<style type="text/css">
 	#flickr_badge_source_txt {padding:0; font: 11px Arial, Helvetica, Sans serif; color:#666666;}
